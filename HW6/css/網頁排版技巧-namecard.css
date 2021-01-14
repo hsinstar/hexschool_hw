@@ -1,0 +1,173 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+
+
+.wrap {
+  width: 800px;
+  margin: 0 auto;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color:rgb(243, 193, 65);
+  position: relative;
+  display: flex;
+  justify-content:flex-start;
+}
+
+.wrap h2 {
+  font-size: 30px;
+  letter-spacing: 2px;
+  color:SaddleBrown;
+  font-weight: bold;
+  writing-mode: vertical-rl;
+  margin-left: 50px;
+  margin-right: 5px;
+}
+
+.wrap p {
+  font-size: 16px;
+  letter-spacing: 4px;
+  color: SaddleBrown;
+  writing-mode: vertical-rl;
+  margin-left: 5px;
+  margin-right: 50px;
+}
+
+.namecard {
+  position: relative;
+  width: 350px;
+  background-color: LemonChiffon;
+  border-radius: 10px;
+  padding: 20px 20px 10px 20px;
+  overflow: hidden;
+}
+
+.info {
+  font-size: 14px;
+  color: SeaGreen;
+  position: absolute;
+  bottom: 10px;
+  z-index: 10;
+}
+
+.namecard h3 {
+  font-size: 16px;
+  color: SeaGreen;
+  margin-top: 10px;
+}
+
+.namecard h1 {
+  font-size: 24px;
+  font-weight: bold;
+  color: SeaGreen;
+  margin: 20px 50px 25px 55px;
+}
+
+ul li {
+  line-height: 1.3;
+}
+
+li a {
+  text-decoration: none;
+  color: SeaGreen;
+}
+
+a:hover {
+  color: Tomato;
+}
+
+.circle1 {
+  width: 110px;
+  height: 110px;
+  border-radius: 50px;
+  background-color: cornflowerblue;
+  position: absolute;
+  right: -30px;
+  top: -30px;
+  z-index: 5;
+}
+
+.circle2 {
+  width: 75px;
+  height: 75px;
+  border-radius: 50px;
+  background-color: DarkTurquoise;
+  position: absolute;
+  right: 20px;
+  top: 40px;
+  z-index: 7;
+}
+
+.circle3 {
+  width: 85px;
+  height: 85px;
+  border-radius: 50px;
+  background-color: MediumSeaGreen;
+  position: absolute;
+  right: -15px;
+  top: 85px;
+  z-index: 9;
+}
+
+.circle4 {
+  width: 95px;
+  height: 95px;
+  border-radius: 50px;
+  background-color:SkyBlue;
+  position: absolute;
+  right: 15px;
+  bottom: 10px;
+  z-index: 6;
+}
+
+.circle5 {
+  width: 65px;
+  height: 65px;
+  border-radius: 50px;
+  background-color: MediumPurple;
+  position: absolute;
+  right: -5px;
+  bottom: -20px;
+  z-index: 8;
+}
