@@ -43,54 +43,71 @@ table {
 }
 
 
-/* container */
+/* htmlweb.css */
+*,*::before,*::after{
+  box-sizing: border-box;
+}
+
 .container {
   width: 1000px;
   margin: 0 auto;
 }
 
-/* header-粉絲專頁 */
-.header {
-  margin-top: 10px;
-  margin-bottom: 50px;
-}
-
-.blog {
+/* header-top */
+.header .top {
   display: flex;
   justify-content: flex-end;
-  background-color: #f5f5f5	;
-  padding: 5px;
+  background-color: #f1f1f1;
+}
+.top li {
+  margin-top: 3px;
+  margin-bottom: 3px;
 }
 
-.blog .border {
-  border-right: 1px solid gray;
-  margin: 4px 5px;
+.top img {
+  padding-left: 5px;
+  padding-right: 3px;
 }
 
-.blog a {
+.fb_icon {
   text-decoration: none;
   color: #00008b;
+  border-right: #696969 solid 1px;
+  padding-right: 5px;
 }
 
-.blog span {
-  color: #00bfff;
+.twitter_icon {
+  text-decoration: none;
+  color: #6dc9f3;
+  padding-right: 5px;
 }
 
-/* header-介紹連結 */
-.about {
+.top li a:hover {
+  color: #ff1493;
+}
+
+/* header-about_us */
+.about_us {
+  display: flex;
+  justify-content: space-between;
+}
+
+.about_us .links {
   display: flex;
 }
 
-.about .links {
-  display: flex;
-  justify-content: flex-end;
-  flex-grow: 1;
-  
+.about_us h1 a {
+	background-image: url("../img/logo.png");
+  width: 224px;
+	height: 53px;
+  display: block;
+	text-indent: 101%;
+	overflow: hidden;
+	white-space: nowrap;
 }
 
 .links li a {
-  display: flex;
-  justify-content: flex-end;
+  display: block;
   text-decoration: none;
   font-size: 16px;
   color: #32cd32;
@@ -104,62 +121,73 @@ table {
   border-bottom: solid 3px;
 }
 
-/* header-大標題 */
+/* header-banner */
 /* Image with Transparent Text */
-.title {
+.banner {
+  height: 346px;
+  background: url("../img/banner.png") no-repeat;
   position: relative;
+  margin-bottom: 50px;
 }
 
-.slogan {
+.banner p {
   position: absolute; /* Position the background text */
   bottom: 35%;
   background: rgba(0, 0, 0, 0.2); /* Black background with 0.2 opacity */
+  width: 1000px;
   color: white; /* text color */
-  width: 960px; /* width of container 1000px - padding 40px*/
   padding: 20px;
   font-size: 25px;
   line-height: 35px;
 }
 
-/* article */
-/* 課程介紹, three topic */
-.topic {
+/* class introduce */
+.item {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   margin-bottom: 50px;
 }
 
-.item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  border: cadetblue solid 1px;
+.item li {
+  width: 320px;
+  border: #d3d3d3 solid 1px;
+  box-shadow: 3px -3px 3px #d3d3d3;
+  padding: 15px;
 }
 
-.imgitem {
-  display: flex;
-  align-items: center;
-  height: 50%;
-  margin-top: 10px;
+.item img {
+  display: block;
+  margin: 20px auto;
+  height: 139px;
+  width: 100%;
+  object-fit: scale-down;
 }
 
-.item h1 {
+.item h2 {
   font-size: 20px;
   font-weight: bold;
   text-align: center;
-  margin-top: 5px;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
-.item p {
+.item p, .jQueryclass li {
   font-size: 18px;
-  padding: 10px;
-  margin-bottom: 5px;
+  line-height: 2;
+  letter-spacing: 1px;
+  border: none;
+  padding: 0;
+  box-shadow: none;
 }
 
-/* table */
-.table h1 {
+.jQueryclass li::before {
+  content: "•";
+  padding-right: 8px;
+  padding-left: 8px;
+}
+
+
+/* compared table */
+.table h2 {
   font-size: 22px;
   font-weight: bold;
   text-align: center;
@@ -187,46 +215,40 @@ table {
   color:	#5cce11;
 }
 
-/* info, use form */
+/* message form */
 .info {
   background-color: #2e8b57;
   margin-top: 50px;
 }
 
-.info h1 {
+.info h2 {
   color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
   padding-top: 25px;
   line-height: 1.5;
 }
 
-.message {
+form {
   display: flex;
-  justify-content: space-around;
-  padding: 20px 10px;
+  justify-content: space-between;
+  font-size: 18px;
+  padding: 20px;
 }
 
-.box {
-  width: 40%;
-  height: 200px;
-  background-color: white;
+.data {
+  width: 50%;
 }
 
-.form {
-  width: 40%;
-}
-
-.form label {
+.data label, #student, #phone, #email {
   color: white;
-  display: inline-block;
-  margin-top: 10px;
-  margin-bottom: 3px;
-}
-
-.form #fname, #phone, #email {
+  display: block;
   width: 100%;
+  margin-bottom: 5px;
 }
 
-.form #submit {
+.data .submit_btn {
   background-color: #3fac30e5;
   color: white;
   margin-top: 10px;
@@ -238,11 +260,16 @@ table {
   display: flex;
   justify-content: space-between;
   align-items: center; /* image不會隨著字體調整而改變比例 */
+  font-size: 18px;
   margin-top: 20px;
-  margin-bottom: 50px;
 }
 
-.contact p span {
-  color: rgb(172, 22, 172);
+.contact a {
   line-height: 1.5;
+  text-decoration: none;
+  color: #ff1493;
+}
+
+.contact a:hover {
+  color: rgb(25, 22, 172);
 }
